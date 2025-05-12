@@ -13,12 +13,12 @@ public class CounterViewer : MonoBehaviour
 
     private void OnEnable()
     {
-        _counter.CountChange += DisplayCount;
+        _counter.CountUpdated += DisplayCount;
     }
 
     private void OnDisable()
     {
-        _counter.CountChange -= DisplayCount;
+        _counter.CountUpdated -= DisplayCount;
     }
 
     private void DisplayCount()

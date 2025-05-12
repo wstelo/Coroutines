@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511be443fca08234f9434fc978fa3d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inputService: {fileID: 761968505}
 --- !u!4 &735566888
 Transform:
   m_ObjectHideFlags: 0
@@ -272,7 +273,7 @@ GameObject:
   - component: {fileID: 761968506}
   - component: {fileID: 761968505}
   m_Layer: 0
-  m_Name: CountManager
+  m_Name: InputService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
