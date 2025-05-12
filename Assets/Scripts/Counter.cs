@@ -9,18 +9,18 @@ public class Counter : MonoBehaviour
     private Coroutine _coroutine;
     private float _delay = 0.5f;
 
-    public event Action CountUpdated;
+    public event Action <float> CountUpdated ;
 
     public float Count => _count;
 
     private void OnEnable()
     {
-        _inputService.CountChanged += IncreaseCount;
+        _inputService.LeftButtonClicked += IncreaseCount;
     }
 
     private void OnDisable()
     {
-        _inputService.CountChanged -= IncreaseCount;
+        _inputService.LeftButtonClicked -= IncreaseCount;
     }
 
     private void IncreaseCount()
@@ -43,7 +43,7 @@ public class Counter : MonoBehaviour
         while (enabled)
         {
             _count++;
-            CountUpdated?.Invoke();
+            CountUpdated?.Invoke(_count);
             yield return wait;
         }
     }

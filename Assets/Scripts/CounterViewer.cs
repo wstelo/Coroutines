@@ -21,8 +21,8 @@ public class CounterViewer : MonoBehaviour
         _counter.CountUpdated -= DisplayCount;
     }
 
-    private void DisplayCount()
+    private void DisplayCount(float count)
     {
-        _counterText.text = _counter.Count.ToString();
+        _counterText.text = count.ToString();
     }
 }
