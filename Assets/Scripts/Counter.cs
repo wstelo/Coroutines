@@ -5,6 +5,7 @@ using UnityEngine;
 public class Counter : MonoBehaviour
 {
     [SerializeField] private InputService _inputService;
+
     private float _count = 0;
     private Coroutine _coroutine;
     private float _delay = 0.5f;
@@ -15,12 +16,12 @@ public class Counter : MonoBehaviour
 
     private void OnEnable()
     {
-        _inputService.LeftButtonClicked += IncreaseCount;
+        _inputService.ButtonClicked += IncreaseCount;
     }
 
     private void OnDisable()
     {
-        _inputService.LeftButtonClicked -= IncreaseCount;
+        _inputService.ButtonClicked -= IncreaseCount;
     }
 
     private void IncreaseCount()

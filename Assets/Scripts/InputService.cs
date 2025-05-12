@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class InputService : MonoBehaviour
 {
-    public event Action LeftButtonClicked;
+    private const int MouseButtonIndex = 0;
+
+    public event Action ButtonClicked;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(MouseButtonIndex))
         {
-            LeftButtonClicked?.Invoke();
+            ButtonClicked?.Invoke();
         }
     }    
 }
